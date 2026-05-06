@@ -154,6 +154,51 @@ header h1 {
   background: linear-gradient(90deg, #25F4EE, #FE2C55, #000000);
 }
 
+/* position relative to place effect */
+.social-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+/* click container */
+.click-effect {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* hand icon */
+.hand {
+  font-size: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ripple circle */
+.ripple {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  top: -5px;
+  left: -5px;
+  animation: rippleAnim 1.5s infinite;
+}
+
+/* animation */
+@keyframes rippleAnim {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .container {
